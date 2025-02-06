@@ -70,24 +70,6 @@ BUD*divers*1000.0*Compte A
 
 ---
 
-## Fonctionnement des Modules Principaux
-
-1. **Chiffrement et déchiffrement :**
-   - `chif_cesar` : Fonction de chiffrement.
-   - `dechif_cesar` : Fonction de déchiffrement.
-
-2. **Lecture des données utilisateur :**
-   - `operation_stock` : Lecture et organisation des opérations et budgets d'un utilisateur.
-
-3. **Gestion des opérations :**
-   - `operation_budget` : Filtrage des opérations selon les critères de recherche (compte, budget, mois).
-   - `tri_rapide_date` : Tri des opérations par date.
-
-4. **Mise à jour des fichiers :**
-   - `reorganiser` : Sauvegarde des modifications apportées aux comptes et budgets.
-
----
-
 ## Choix de Conception
 
 - Utilisation de fichiers texte cryptés pour le stockage des données, garantissant la sécurité.
@@ -96,40 +78,12 @@ BUD*divers*1000.0*Compte A
 
 ---
 
-## Déroulement du Projet
-
-- **Phase textuelle :**
-  - Implémentation des fonctions de base et tests via le terminal.
-
-- **Phase graphique :**
-  - Conception des interfaces avec QT Designer.
-  - Intégration des fonctions à l'interface graphique avec PySide2.
-
-- **Organisation du travail :**
-  - Collaboration régulière pour la conception, les tests et les corrections.
-  - Répartition des tâches entre la programmation et les tests.
-
----
-
-## Difficultés et Solutions
-
-- **Problème de compréhension des codes entre les membres :** Mise en place de chaînes de documentation.
-- **Gestion des bugs :** Identification et correction collective des erreurs.
-
----
-
-## Conclusion
-
-Ce projet nous a permis de développer des compétences en programmation, gestion de projet, collaboration et résolution de problèmes. La transition de la partie textuelle à la partie graphique a été un challenge enrichissant, nous offrant une expérience complète sur le cycle de développement d’un projet logiciel.
-
----
-
 ## Instructions pour l’Exécution
 
 1. Cloner le projet :
    ```bash
-   git clone <url_du_repository>
-   cd <nom_du_repository>
+   git clone https://github.com/whoismathieu/Bank-account-manager
+   cd Bank-account-manager
    ```
 
 2. Installer les dépendances :
