@@ -1,0 +1,6 @@
+CPT*Compte A
+CPT*Compte B
+OPE*01/01/2022*cinema*Compte A*18.50*CB*False*sorties
+OPE*06/01/2022*galette*Compte B*10.54*CB*True*alimentation
+OPE*12/01/2022*anniversaire*Compte A*50*VIR*True*divers
+OPE*17/02/2022*Compte A vers Compte B*Compte A Compte B*10*VIR*False

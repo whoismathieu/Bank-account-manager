@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1106</width>
+    <height>855</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="arriere_plan" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>850</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Arrières-plans*/
+QWidget#arriere_plan{
+background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 #4b6cb7,  stop:1 #4b6cb7);
+}
+QLabel#arriere_plan_ope{
+background-color:qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.3 rgba(146, 141, 171,100), stop:1 rgba(31, 28, 44,100));
+border:none;
+border-radius:20px;
+border-top-right-radius: 0px;
+}
+QLabel#arriere_plan_solde{
+background-color:qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.3 rgba(255,255,255,100), stop:1 rgba(146, 141, 171,100));
+border-top-right-radius: 20px;
+border-top-left-radius: 20px;
+}
+
+
+/* Combo box */
+
+QComboBox{
+background-color:transparent;
+border:0px;
+border-bottom: 5px solid rgba(255,255,255,1);
+color:rgba(255,255,255,1);
+font: 20px &quot;SF Pro Regular&quot;;
+}
+
+QComboBox QAbstractItemView {
+    background-color:#ffffff;
+    selection-background-color:#fd314d;
+    color:#000000;
+    outline: none;
+}
+
+
+/* Boutons */
+
+QPushButton{
+  border-radius:0px;
+  color: rgba(255,255,255,1);
+  border-bottom: 5px solid rgba(255,255,255,1);
+  font: 20px &quot;SF Pro Regular&quot;;
+  font-size: 20px;
+  text-align:center;
+  width: fit-content;
+  background-color: none;
+}
+QPushButton:pressed {
+  border-bottom: 8px solid rgba(255,255,255,50);
+}
+QPushButton:hover:!pressed {
+  border-bottom: 8px solid rgba(255,255,255,1);
+}
+
+
+/* Labels */
+
+QLabel{
+background-color:rgba(20,20,20,100);
+color:#ffffff;
+qproperty-alignment: AlignCenter;
+font: 25px &quot;SF Pro Regular&quot;;
+}
+QLabel#nombre_page{
+background-color:none;
+}
+QLabel#label_fenetre{
+background-color:none;
+qproperty-alignment: AlignCenter;
+font: 25px &quot;SF Pro Semibold&quot;;
+color:#ffffff;
+}
+QLabel#label_logo{
+background-color:none;
+font: 45px &quot;Goudy Bookletter 1911&quot;;
+color:rgba(255,255,255,1)
+}
+QLabel#label_date{
+border-top-left-radius: 20px;
+}
+QLabel#label_budget{
+border-top-right-radius: 20px;
+}
+QLabel#label_basgauche{
+border-bottom-left-radius: 20px;
+}
+QLabel#label_basdroite{
+border-bottom-right-radius: 20px;
+}</string>
+   </property>
+   <widget class="QComboBox" name="comboBox_comptes">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>100</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_solde">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>100</y>
+      <width>651</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:none;
+font-size:20px;
+qproperty-alignment: 'AlignLeft | AlignVCenter';</string>
+    </property>
+    <property name="text">
+     <string>Solde du compte : </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ajout_ope">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>216</y>
+      <width>111</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Ajouter une
+opération 🡥</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>181</y>
+      <width>921</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="spacing">
+      <number>1</number>
+     </property>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_L2_C0">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_montant">
+       <property name="styleSheet">
+        <string notr="true">background-color:#ffffff;
+color:#000000;</string>
+       </property>
+       <property name="text">
+        <string>Montant</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QLabel" name="label_L0_C4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QLabel" name="label_L4_C3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_L2_C1">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="label_L2_C3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="4">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="4">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="label_basgauche">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_L3_C0">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="QLabel" name="label_L4_C4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="5">
+      <widget class="QLabel" name="label_L4_C5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="5">
+      <widget class="QLabel" name="label_L2_C5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_date">
+       <property name="styleSheet">
+        <string notr="true">background-color:#ffffff;
+color:#000000;</string>
+       </property>
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="label_L1_C1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_L3_C1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="QLabel" name="label_L5_C3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="5">
+      <widget class="QLabel" name="label_L6_C5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_L5_C0">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_type">
+       <property name="styleSheet">
+        <string notr="true">background-color:#ffffff;
+color:#000000;</string>
+       </property>
+       <property name="text">
+        <string>Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLabel" name="label_L6_C1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="4">
+      <widget class="QLabel" name="label_L6_C4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QLabel" name="label_L1_C4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLabel" name="label_L3_C3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_L0_C0">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_libelle">
+       <property name="styleSheet">
+        <string notr="true">background-color:#ffffff;
+color:#000000;</string>
+       </property>
+       <property name="text">
+        <string>Libellé</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5">
+      <widget class="QLabel" name="label_L3_C5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLabel" name="label_L4_C1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="label_L2_C2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLabel" name="label_budget">
+       <property name="styleSheet">
+        <string notr="true">background-color:#ffffff;
+color:#000000;</string>
+       </property>
+       <property name="text">
+        <string>Budget</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3">
+      <widget class="QLabel" name="label_L6_C3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="5">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLabel" name="label_L3_C2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLabel" name="label_verif">
+       <property name="styleSheet">
+        <string notr="true">background-color:#ffffff;
+color:#000000;</string>
+       </property>
+       <property name="text">
+        <string>Vérification</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="3">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QLabel" name="label_L5_C2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="2">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="5">
+      <widget class="QLabel" name="label_basdroite">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="label_L1_C2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="label_L1_C3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="QLabel" name="label_L3_C4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
+      <widget class="QLabel" name="label_L0_C5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QLabel" name="label_L1_C5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="label_L0_C2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QLabel" name="label_L6_C2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="4">
+      <widget class="QLabel" name="label_L5_C4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_L6_C0">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="label_L0_C3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="5">
+      <widget class="QLabel" name="label_L5_C5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QLabel" name="label_L2_C4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="3">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLabel" name="label_L5_C1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_L1_C0">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_L0_C1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_L4_C0">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QLabel" name="label_L4_C2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="2">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="3">
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="4">
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="5">
+      <widget class="QLabel" name="label_16">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ajout_vir">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>111</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Faire un
+virement 🡥</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ajout_compte">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>540</y>
+      <width>111</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ajouter
+un compte 🡥</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_precedent">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>780</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:18px;</string>
+    </property>
+    <property name="text">
+     <string>🡠 Précédent</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="arriere_plan_ope">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>160</y>
+      <width>961</width>
+      <height>670</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="arriere_plan_solde">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>89</y>
+      <width>711</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_retour">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>780</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>← Retour</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_logo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>141</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DEMJ.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_suivant">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>780</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:18px;</string>
+    </property>
+    <property name="text">
+     <string>Suivant 🡢</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_fenetre">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>1101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gérer mes comptes</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="nombre_page">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>790</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>/</string>
+    </property>
+   </widget>
+   <zorder>label_fenetre</zorder>
+   <zorder>arriere_plan_solde</zorder>
+   <zorder>arriere_plan_ope</zorder>
+   <zorder>comboBox_comptes</zorder>
+   <zorder>label_solde</zorder>
+   <zorder>pushButton_ajout_ope</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>pushButton_ajout_vir</zorder>
+   <zorder>pushButton_ajout_compte</zorder>
+   <zorder>pushButton_precedent</zorder>
+   <zorder>pushButton_retour</zorder>
+   <zorder>label_logo</zorder>
+   <zorder>pushButton_suivant</zorder>
+   <zorder>nombre_page</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

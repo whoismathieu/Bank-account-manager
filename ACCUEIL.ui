@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1108</width>
+    <height>861</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="arriere_plan" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>850</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Arrière-plan */
+QWidget#arriere_plan{
+  background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0.1 #83a4d4, stop:1 #b6fbff);
+}
+
+/* Labels */
+QLabel{
+color:#ffffff;
+font: 8pt &quot;SF Pro Regular&quot;;
+qproperty-alignment: AlignCenter;
+}
+QLabel#label_connexion{
+font: 50px &quot;SF Pro Regular&quot;;
+}
+QLabel#label_bienvenue{
+font-size:28px;
+}
+QLabel#logo{
+font: 50pt &quot;Goudy Bookletter 1911&quot;;
+}
+QLabel#arriere_plan_mdp{
+background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.3 rgba(146, 141, 171,100), stop:1 rgba(31, 28, 44,100));
+border-radius: 30px;
+color: black;
+}
+QLabel#label_erreur{
+qproperty-alignment: AlignCenter;
+font: 20px &quot;SF Pro Light&quot;;;
+color:rgb(255,0,0);
+font-size:18px;
+}
+
+/* Boutons */
+QPushButton {
+background-color: rgba(255,255,255, 150);
+border-radius: 5px;
+color: #000000;
+padding: 0px;
+font: 40px &quot;SF Pro Regular&quot;;
+height:80%;
+}
+QPushButton:pressed {
+background-color:rgba(255,255,255,200);
+color:#ffffff;
+}
+QPushButton:hover:!pressed {
+color:#FFFFFF;
+background-color: rgba(255,255,255,180);
+}
+
+/* Zones de texte */
+QLineEdit{
+background-color:rgba(0,0,0,0);
+border :none;
+border-bottom: 5px solid rgba(255,255,255,150);
+color:rgba(255,255,255,230);
+padding-bottom:7px;
+font: 20px &quot;SF Pro Light&quot;;
+qproperty-alignment: AlignCenter;
+}</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <widget class="QLabel" name="label_bienvenue">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>390</y>
+      <width>461</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Pro Regular</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Bienvenue chez nous.
+Veuillez vous connecter pour pouvoir
+accéder à vos informations.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_connexion">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>90</y>
+      <width>301</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>CONNEXION</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="zoneID">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>230</y>
+      <width>381</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Identifiant</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="zoneMDP">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>340</y>
+      <width>381</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Mot de passe</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>418</y>
+      <width>381</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
+     <property name="spacing">
+      <number>1</number>
+     </property>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="pushButton_valider">
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>Valider</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="pushButton_annuler">
+       <property name="styleSheet">
+        <string notr="true">font-size:25px;</string>
+       </property>
+       <property name="text">
+        <string>Annuler</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="arriere_plan_mdp">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>310</y>
+      <width>461</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="logo">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>50</y>
+      <width>461</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>DEMJ &amp; co.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>820</y>
+      <width>411</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">qproperty-alignment: AlignCenter;</string>
+    </property>
+    <property name="text">
+     <string>© 2023 DEMJ &amp; Co. All rights reserved.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_erreur">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>790</y>
+      <width>461</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ⓘ Identifiant ou mot de passe incorrect,  3 essais restants</string>
+    </property>
+   </widget>
+   <zorder>arriere_plan_mdp</zorder>
+   <zorder>label_bienvenue</zorder>
+   <zorder>label_connexion</zorder>
+   <zorder>zoneID</zorder>
+   <zorder>zoneMDP</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>logo</zorder>
+   <zorder>label</zorder>
+   <zorder>label_erreur</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1132</width>
+    <height>887</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="arriere_plan" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>850</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*Arrières-plans*/
+
+QWidget#arriere_plan{
+  background-color: #4b6cb7;
+}
+QLabel#arriere_plan_param{
+  background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.3 rgba(146, 141, 171,100), stop:1 rgba(31, 28, 44,100));
+  border-radius:30px;
+}
+
+
+/* Combo box */
+
+QComboBox{
+background-color:transparent;
+border:0px;
+border-bottom: 2px solid rgba(255,255,255,1);
+color:#ffffff;
+font: 20px &quot;SF Pro Regular&quot;;
+}
+QComboBox QAbstractItemView {
+    background-color:#ffffff;
+    selection-background-color:#2B32B2;
+    color:#000000;
+    outline: none;
+}
+
+
+/* Labels */
+
+QLabel{
+qproperty-alignment: AlignCenter;
+font: 25px &quot;SF Pro Semibold&quot;;
+color:#ffffff;
+}
+QLabel#label_statut{
+qproperty-alignment: &quot;AlignHLeft | AlignVCenter&quot;;
+}
+QLabel#label_appro{
+qproperty-alignment: &quot;AlignHLeft | AlignVCenter&quot;;
+}
+QLabel#label_verseur{
+qproperty-alignment: &quot;AlignHLeft | AlignVCenter&quot;;
+}
+QLabel#label_budget{
+qproperty-alignment: &quot;AlignHLeft | AlignVCenter&quot;;
+}
+QLabel#label_euro{
+qproperty-alignment: AlignRight;
+font-size: 40px;
+color:#ffffff;
+}
+QLabel#label_erreur{
+color:#fe9c67;
+font-size:18px;
+}
+QLabel#label_confirmation{
+color:rgba(122,222,126,1);
+font-size:18px;
+}
+
+/* Zones de texte */
+
+QLineEdit{
+background-color:rgba(0,0,0,30);
+border:none;
+color:#ffffff;
+font: 30px &quot;SF Pro Regular&quot;;
+qproperty-alignment:AlignCenter;
+}
+
+
+/* Boutons */
+
+QPushButton {
+background-color: rgba(255,255,255, 150);
+border-radius: 5px;
+color: #000000;
+padding: 0px;
+font: 30px &quot;SF Pro Regular&quot;;
+height:76%;
+}
+QPushButton:pressed {
+background-color:rgba(255,255,255,200);
+color:#ffffff;
+}
+QPushButton:hover:!pressed {
+color:#FFFFFF;
+background-color: rgba(255,255,255,180);
+}
+QPushButton#pushButton_valider{
+background-color:rgba(122,222,126,200);
+border-radius:25px;
+color:#ffffff;
+font: 20px &quot;SF Pro Regular&quot;;
+}
+QPushButton#pushButton_valider:pressed {
+background-color:rgba(122,222,126,1);
+}
+QPushButton#pushButton_valider:hover:!pressed {
+background-color: rgba(122,222,126,230);
+}
+QPushButton#pushButton_retour{
+  border-radius:none;
+  color: rgba(255,255,255,1);
+  border-bottom: 5px solid rgba(255,255,255,1);
+  font-size: 20px;
+  text-align:center;
+  width: fit-content;
+  background-color: none;
+}
+QPushButton#pushButton_retour:pressed {
+  border-bottom: 8px solid rgba(255,255,255,50);
+}
+QPushButton#pushButton_retour:hover:!pressed {
+  border-bottom: 8px solid rgba(255,255,255,1);
+}</string>
+   </property>
+   <widget class="QComboBox" name="comboBox_mois">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>230</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Janvier</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Février</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mars</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Avril</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mai</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Juin</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Juillet</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Août</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Septembre</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Octobre</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Novembre</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Décembre</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>360</y>
+      <width>351</width>
+      <height>312</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="text">
+        <string>6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_1">
+       <property name="text">
+        <string>7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>9</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="pushButton_suppr">
+       <property name="text">
+        <string>⌫</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLineEdit" name="zone_montant">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>290</y>
+      <width>311</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>1101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Faire un virement</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="arriere_plan_param">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>110</y>
+      <width>1041</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_annee">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>230</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>2023</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2022</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2021</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2020</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2019</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2018</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2017</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2016</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2015</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2014</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2013</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_jour">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>230</y>
+      <width>151</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>01</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>02</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>03</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>04</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>05</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>06</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>07</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>08</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>09</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>11</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>12</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>13</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>14</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>15</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>16</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>17</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>18</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>19</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>20</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>21</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>22</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>23</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>24</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>25</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>26</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>27</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>28</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>29</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>30</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>31</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>1041</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Veuillez remplir ci-dessous toutes les informations de votre virement.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_valider">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>700</y>
+      <width>121</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Valider</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_compte1">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>420</y>
+      <width>201</width>
+      <height>40</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_compte2">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>500</y>
+      <width>201</width>
+      <height>40</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>240</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Montant du virement</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_appro">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>430</y>
+      <width>301</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Compte verseur :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_verseur">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>500</y>
+      <width>301</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Compte à approvisonner :</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_statut">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>340</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>True</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>False</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_statut">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>350</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Statut du virement</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_retour">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>790</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>← Retour</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_euro">
+    <property name="geometry">
+     <rect>
+      <x>406</x>
+      <y>300</y>
+      <width>31</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>€</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_erreur">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>650</y>
+      <width>531</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ⓘ Erreur, veuillez remplir toutes les informations assurez-vous que
+les deux comptes soient bien différents.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_confirmation">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>710</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ⓘ Le virement a été effectué avec succès.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_budget">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>580</y>
+      <width>281</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Budget (Peut être vide):</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_jour">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>200</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Jour</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_mois">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>200</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mois</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_annee">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>200</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Année</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_budget">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>580</y>
+      <width>201</width>
+      <height>40</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:none;
+font: 45px &quot;Goudy Bookletter 1911&quot;;
+color:rgba(255,255,255,1)</string>
+    </property>
+    <property name="text">
+     <string>DEMJ.</string>
+    </property>
+   </widget>
+   <zorder>arriere_plan_param</zorder>
+   <zorder>comboBox_mois</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>zone_montant</zorder>
+   <zorder>label</zorder>
+   <zorder>comboBox_annee</zorder>
+   <zorder>comboBox_jour</zorder>
+   <zorder>label_2</zorder>
+   <zorder>pushButton_valider</zorder>
+   <zorder>comboBox_compte1</zorder>
+   <zorder>comboBox_compte2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_appro</zorder>
+   <zorder>label_verseur</zorder>
+   <zorder>comboBox_statut</zorder>
+   <zorder>label_statut</zorder>
+   <zorder>pushButton_retour</zorder>
+   <zorder>label_euro</zorder>
+   <zorder>label_erreur</zorder>
+   <zorder>label_confirmation</zorder>
+   <zorder>label_budget</zorder>
+   <zorder>label_jour</zorder>
+   <zorder>label_mois</zorder>
+   <zorder>label_annee</zorder>
+   <zorder>comboBox_budget</zorder>
+   <zorder>label_4</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

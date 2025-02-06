@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1120</width>
+    <height>895</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="arriere_plan" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>850</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Arrière-plans */
+
+QWidget#arriere_plan{
+  background-color:#4b6cb7;
+}
+QLabel#arriere_plan_mdp{
+  background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.3 rgba(146, 141, 171,100), stop:1 rgba(31, 28, 44,100));
+  border-radius:30px;
+}
+
+
+/* Labels */
+
+QLabel{
+qproperty-alignment: AlignCenter;
+font: 25px &quot;SF Pro Semibold&quot;;
+color:#ffffff;
+}
+QLabel#label_compte{
+font-size:35px;
+}
+QLabel#label_info{
+font: 13pt &quot;SF Pro Regular&quot;;
+}
+QLabel#label_erreur{
+color:#fe9c67;
+font-size:20px;
+}
+QLabel#label_confirmation{
+color:rgb(122,222,126);
+font-size:20px;
+}
+
+
+/* Boutons */
+
+QPushButton{
+background-color:rgba(122,222,126,200);
+border-radius:25px;
+color:#ffffff;
+font: 20px &quot;SF Pro Regular&quot;;
+}
+QPushButton:pressed {
+background-color:rgba(122,222,126,1);
+}
+QPushButton:hover:!pressed {
+background-color: rgba(122,222,126,230);
+}
+QPushButton#pushButton_retour{
+  border-radius:none;
+  color: rgba(255,255,255,1);
+  border-bottom: 5px solid rgba(255,255,255,1);
+  font-size: 20px;
+  text-align:center;
+  width: fit-content;
+  background-color: none;
+}
+QPushButton#pushButton_retour:pressed {
+  border-bottom: 8px solid rgba(255,255,255,50);
+}
+QPushButton#pushButton_retour:hover:!pressed {
+  border-bottom: 8px solid rgba(255,255,255,1);
+}
+
+
+/* Zones de texte */
+
+QLineEdit#zone_compte{
+background-color:rgba(0,0,0,10);
+border:none;
+color:#ffffff;
+font: 30px &quot;SF Pro Regular&quot;;
+qproperty-alignment:AlignCenter;
+}
+</string>
+   </property>
+   <widget class="QLabel" name="label_nom">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>1101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ajouter un compte</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_info">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>650</y>
+      <width>981</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cliquez sur &quot;créer&quot; une fois qui vous avez fini.
+Un message d'erreur s'affichera si le compte existe déjà.
+Un message de succès s'affichera dans le cas contraire.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="arriere_plan_mdp">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>110</y>
+      <width>1021</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_compte">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>150</y>
+      <width>981</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Entrez le nom de votre nouveau compte dans la
+zone ci-dessous.</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="zone_compte">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>350</y>
+      <width>981</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Aucun</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_creer">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>570</y>
+      <width>110</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Créer</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_erreur">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>450</y>
+      <width>981</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ⓘ Erreur, ce nom de compte existe déjà ou n'est pas assez long ( 1 caractère minimum ).
+Veuillez réessayer.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_retour">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>800</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>← Retour</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_confirmation">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>510</y>
+      <width>981</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ⓘ Le compte a été créé avec succès.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:none;
+font: 45px &quot;Goudy Bookletter 1911&quot;;
+color:rgba(255,255,255,1)</string>
+    </property>
+    <property name="text">
+     <string>DEMJ.</string>
+    </property>
+   </widget>
+   <zorder>arriere_plan_mdp</zorder>
+   <zorder>label_nom</zorder>
+   <zorder>label_info</zorder>
+   <zorder>label_compte</zorder>
+   <zorder>zone_compte</zorder>
+   <zorder>pushButton_creer</zorder>
+   <zorder>label_erreur</zorder>
+   <zorder>pushButton_retour</zorder>
+   <zorder>label_confirmation</zorder>
+   <zorder>label</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

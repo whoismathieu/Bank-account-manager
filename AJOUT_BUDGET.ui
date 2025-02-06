@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1132</width>
+    <height>887</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="arriere_plan" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>850</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Arrière-plan */
+QWidget#arriere_plan{
+background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 #AA076B, stop:1 #61045F); 
+}
+QLabel#arriere_plan_param{
+  background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.3 rgba(146, 141, 171,100), stop:1 rgba(31, 28, 44,100));
+  border-radius:30px;
+}
+
+
+/* Combo box*/
+
+QComboBox{
+background-color:transparent;
+border:0px;
+border-bottom: 2px solid rgba(255,255,255,1);
+color:#ffffff;
+font: 20px &quot;SF Pro Regular&quot;;
+}
+QComboBox QAbstractItemView {
+    background-color:#ffffff;
+    selection-background-color:#2B32B2;
+    color:#000000;
+    outline: none;
+}
+
+
+/* Labels */
+QLabel{
+qproperty-alignment: AlignCenter;
+font: 25px &quot;SF Pro Semibold&quot;;
+color:#ffffff;
+}
+QLabel#label_budget{
+qproperty-alignment: &quot;AlignHLeft | AlignVCenter&quot;;
+}
+QLabel#label_compte{
+qproperty-alignment: &quot;AlignHLeft | AlignVCenter&quot;;
+}
+QLabel#label_euro{
+qproperty-alignment: &quot;AlignHRight | AlignVCenter&quot;;
+font-size: 40px;
+color:#ffffff;
+}
+QLabel#label_erreur{
+color:#fe9c67;
+font-size:18px;
+}
+QLabel#label_confirmation{
+color:rgba(122,222,126,1);
+font-size:18px;
+}
+
+
+/* Zones de texte */
+QLineEdit{
+background-color:rgba(0,0,0,30);
+border:none;
+color:#ffffff;
+font: 30px &quot;SF Pro Regular&quot;;
+qproperty-alignment:AlignCenter;
+}
+QLineEdit#zone_budget{
+qproperty-alignment:AlignLeft;
+padding-left:10px;
+}
+
+
+/* Boutons */
+
+QPushButton {
+background-color: rgba(255,255,255, 150);
+border-radius: 5px;
+color: #000000;
+padding: 0px;
+font: 30px &quot;SF Pro Regular&quot;;
+height:76%;
+}
+QPushButton:pressed {
+background-color:rgba(255,255,255,200);
+color:#ffffff;
+}
+QPushButton:hover:!pressed {
+color:#FFFFFF;
+background-color: rgba(255,255,255,180);
+}
+QPushButton#pushButton_creer{
+background-color:rgba(122,222,126,200);
+border-radius:25px;
+color:#ffffff;
+font: 20px &quot;SF Pro Regular&quot;;
+}
+QPushButton#pushButton_creer:pressed {
+background-color:rgba(122,222,126,1);
+}
+QPushButton#pushButton_creer:hover:!pressed {
+background-color: rgba(122,222,126,230);
+}
+QPushButton#pushButton_retour{
+  border-radius:none;
+  color: rgba(255,255,255,1);
+  border-bottom: 5px solid rgba(255,255,255,1);
+  font-size: 20px;
+  text-align:center;
+  width: fit-content;
+  background-color: none;
+}
+QPushButton#pushButton_retour:pressed {
+  border-bottom: 8px solid rgba(255,255,255,50);
+}
+QPushButton#pushButton_retour:hover:!pressed {
+  border-bottom: 8px solid rgba(255,255,255,1);
+}</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>360</y>
+      <width>351</width>
+      <height>312</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>9</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="text">
+        <string>6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_1">
+       <property name="text">
+        <string>7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="pushButton_suppr">
+       <property name="text">
+        <string>⌫</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLineEdit" name="zone_montant">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>290</y>
+      <width>311</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_titre">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>1101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ajouter un budget</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="arriere_plan_param">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>110</y>
+      <width>1041</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_infos">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>1041</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:19pt;&quot;&gt;Veuillez remplir ci-dessous toutes les informations de votre nouveau budget.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_creer">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>710</y>
+      <width>161</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Créer</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_montant">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>240</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Montant du nouveau budget</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_budget">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>390</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nom du budget :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_retour">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>790</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>← Retour</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_euro">
+    <property name="geometry">
+     <rect>
+      <x>976</x>
+      <y>290</y>
+      <width>31</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>€</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="zone_budget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>460</y>
+      <width>531</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_statut_2">
+    <property name="geometry">
+     <rect>
+      <x>1360</x>
+      <y>880</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>True</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>False</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_compte">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>290</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Compte :</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_compte">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>291</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_erreur">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>520</y>
+      <width>531</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ⓘ Erreur,  ce budget existe déjà ou est incorrect.
+Vous ne pouvez pas appeler votre compte &quot;budgets&quot;.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_confirmation">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>570</y>
+      <width>531</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ⓘ Le nouveau budget à été correctement ajouté.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>151</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:none;
+font: 45px &quot;Goudy Bookletter 1911&quot;;
+color:rgba(255,255,255,1)</string>
+    </property>
+    <property name="text">
+     <string>DEMJ.</string>
+    </property>
+   </widget>
+   <zorder>arriere_plan_param</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>zone_montant</zorder>
+   <zorder>label_titre</zorder>
+   <zorder>label_infos</zorder>
+   <zorder>pushButton_creer</zorder>
+   <zorder>label_montant</zorder>
+   <zorder>label_budget</zorder>
+   <zorder>pushButton_retour</zorder>
+   <zorder>label_euro</zorder>
+   <zorder>zone_budget</zorder>
+   <zorder>comboBox_statut_2</zorder>
+   <zorder>label_compte</zorder>
+   <zorder>comboBox_compte</zorder>
+   <zorder>label_erreur</zorder>
+   <zorder>label_confirmation</zorder>
+   <zorder>label</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
