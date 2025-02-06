@@ -10,7 +10,7 @@ L'objectif de ce projet était de développer une application graphique en Pytho
 
 1. **Phase d'Identification :**
    - Authentification via un identifiant et un mot de passe saisis sur un clavier virtuel.
-   - Stockage des identifiants dans un fichier texte crypté (algorithme de chiffrement de type César).
+   - Verification des identifiants dans un fichier texte crypté (algorithme de chiffrement de type César).
 
 2. **Gestion des Comptes :**
    - Gestion de plusieurs comptes bancaires.
