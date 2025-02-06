@@ -93,7 +93,7 @@ BUD*divers*1000.0*Compte A
 
 3. Lancer l'application :
    ```bash
-   python main.py
+   python Launcher.py
    ```
 
 ---
