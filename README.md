@@ -1,6 +1,6 @@
 # Gestion de Comptes Bancaires et de Budgets
 
-Ce projet a été réalisé dans le cadre de l'Option Informatique 2 en L1 à l'Université Paris Cité (année universitaire 2022-2023) par Dylan LIN, Jacques ZHENG, Egemen YAPSIK et Matthieu MOUSTACHE.
+Ce projet a été réalisé dans le cadre de l'Option Informatique 2 en L1 à l'Université Paris Cité (année universitaire 2022-2023) par Dylan LIN, Jacques ZHENG, Egemen YAPSIK et Mathieu MOUSTACHE.
 
 ---
 
