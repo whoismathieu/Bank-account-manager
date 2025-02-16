@@ -6,7 +6,7 @@ Ce projet a été réalisé dans le cadre de l'Option Informatique 2 en L1 à l'
 
 ## Description du Projet
 
-L'objectif de ce projet était de développer une application graphique en Python permettant de gérer des comptes bancaires et des budgets d'un utilisateur. Le projet est divisé en trois parties principales :
+Le projet consiste à réaliser une application graphique en Python qui permet de gérer les comptes bancaires et les budgets d'un utilisateur. Ce projet est divisé en trois parties :
 
 1. **Phase d'Identification :**
    - Authentification via un identifiant et un mot de passe saisis sur un clavier virtuel.
