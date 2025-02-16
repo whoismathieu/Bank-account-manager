@@ -50,7 +50,7 @@ Les données sont organisées dans des fichiers texte cryptés selon l'algorithm
 - **Fichier `ident.txt` :** Contient les identifiants et les mots de passe des utilisateurs.
 - **Fichiers par utilisateur :** Stockent les comptes, les budgets et les opérations associées.
 
-### Exemple de structure d'un fichier utilisateur décrypté :
+### Exemple de structure d'un fichier utilisateur déchiffré :
 ```
 CPT*Compte A
 CPT*Compte B
